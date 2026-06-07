@@ -26,7 +26,8 @@
           <line x1="12" y1="8" x2="12.01" y2="8" />
         </svg>
       </span>
-      <span class="my-message__text"><slot>{{ message }}</slot></span>
+      <span v-if="isStringMessage" class="my-message__text">{{ message }}</span>
+      <component :is="message" v-else class="my-message__text" />
       <button v-if="showClose" class="my-message__close" @click="close" aria-label="关闭">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="18" y1="6" x2="6" y2="18" />
@@ -44,14 +45,14 @@ export default {
 </script>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 
 const props = defineProps({
   type: {
     type: String,
     default: 'info',
   },
-  message: { type: String, default: '' },
+  message: { type: [String, Function], default: '' },
   duration: { type: Number, default: 3000 },
   showClose: { type: Boolean, default: false },
 })
@@ -60,6 +61,8 @@ const emit = defineEmits(['destroy'])
 
 const visible = ref(true)
 let timer = null
+
+const isStringMessage = computed(() => typeof props.message === 'string')
 
 function close() {
   visible.value = false
