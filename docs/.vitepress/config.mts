@@ -4,6 +4,7 @@ import { resolve } from 'path'
 export default defineConfig({
   title: 'My UI Lib',
   description: '一个 Vue 3 组件库文档',
+  base: '/UI-vitepress/',
   vite: {
     resolve: {
     alias: {
