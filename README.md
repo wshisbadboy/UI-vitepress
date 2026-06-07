@@ -1,12 +1,71 @@
 # UI-vitepress
 
-My UI Lib 组件库的 VitePress 文档站点，提供组件的交互式演示与 API 文档。
+[![npm version](https://img.shields.io/npm/v/wshisbadboy-ui-lib?color=3b82f6)](https://www.npmjs.com/package/wshisbadboy-ui-lib)
+[![license](https://img.shields.io/npm/l/wshisbadboy-ui-lib)](./LICENSE)
+
+My UI Lib 组件库的 VitePress 文档站点。组件库已发布为 npm 包 [`wshisbadboy-ui-lib`](https://www.npmjs.com/package/wshisbadboy-ui-lib)，文档站点部署在 [GitHub Pages](https://wshisbadboy.github.io/UI-vitepress/)。
+
+## 安装
+
+```bash
+npm install wshisbadboy-ui-lib
+# 或
+pnpm add wshisbadboy-ui-lib
+# 或
+yarn add wshisbadboy-ui-lib
+```
+
+## 快速上手
+
+```js
+import { createApp } from 'vue'
+import UI from 'wshisbadboy-ui-lib'
+import 'wshisbadboy-ui-lib/dist/wshisbadboy-ui-lib.css'
+
+const app = createApp(App)
+app.use(UI)
+```
+
+```html
+<template>
+  <MyButton variant="primary">点击我</MyButton>
+  <MyAlert type="success" title="成功" description="操作已完成" />
+  <MyCollapse>
+    <MyCollapseItem title="标题" name="1">内容</MyCollapseItem>
+  </MyCollapse>
+</template>
+```
+
+也可按需引入：
+
+```js
+import { Button, Alert, Message } from 'wshisbadboy-ui-lib'
+import 'wshisbadboy-ui-lib/dist/wshisbadboy-ui-lib.css'
+
+// 命令式调用 Message
+Message.success('操作成功')
+```
+
+## 组件列表
+
+| 组件 | 说明 |
+|------|------|
+| Button 按钮 | 支持 primary / secondary / outline / text 四种变体，三种尺寸，禁用与加载状态 |
+| Alert 提示 | 支持 info / success / warning / error 四种类型，可关闭，支持自定义标题和插槽 |
+| Message 消息提示 | 命令式 API 的全局消息通知，支持纯文本和 VNode 渲染，自动消失 |
+| Collapse 折叠面板 | 支持多面板展开、手风琴模式、禁用状态、自定义标题 |
+
+## 文档
+
+在线文档：[wshisbadboy.github.io/UI-vitepress](https://wshisbadboy.github.io/UI-vitepress/)
+
+每个组件文档都包含可交互的实时演示和完整的 API 表格。
 
 ## 技术栈
 
 - [VitePress](https://vitepress.dev/) — 基于 Vite 的静态站点生成器
 - [Vue 3](https://vuejs.org/) — 组件库底层框架
-- [ui-lib](../ui-lib) — 同仓库内的 Vue 3 组件库
+- [Vite](https://vitejs.dev/) — 构建工具
 
 ## 目录结构
 
@@ -62,14 +121,3 @@ npm run build
 # 预览构建结果
 npm run preview
 ```
-
-## 已文档化的组件
-
-| 组件 | 说明 |
-|------|------|
-| Button 按钮 | 支持 primary / secondary / outline / text 四种变体，三种尺寸，禁用与加载状态 |
-| Alert 提示 | 支持 info / success / warning / error 四种类型，可关闭，支持自定义标题和插槽 |
-| Message 消息提示 | 命令式 API 的全局消息通知，支持纯文本和 VNode 渲染，自动消失 |
-| Collapse 折叠面板 | 支持多面板展开、手风琴模式、禁用状态、自定义标题 |
-
-每个组件文档都包含可交互的实时演示和完整的 API 表格。
