@@ -1,9 +1,11 @@
 import Button from './components/Button/Button.vue'
 import { Collapse, CollapseItem } from './components/Collapse'
+import Alert from './components/Alert/Alert.vue'
+import { Message } from './components/Message'
 
-export { Button, Collapse, CollapseItem }
+export { Button, Collapse, CollapseItem, Alert, Message }
 
-const components = [Button, Collapse, CollapseItem]
+const components = [Button, Collapse, CollapseItem, Alert, Message]
 
 const install = (app) => {
   components.forEach((component) => {

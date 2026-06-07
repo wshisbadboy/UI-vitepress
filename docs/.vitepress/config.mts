@@ -33,6 +33,8 @@ export default defineConfig({
           text: '组件',
           items: [
             { text: 'Button 按钮', link: '/components/button' },
+            { text: 'Alert 提示', link: '/components/alert' },
+            { text: 'Message 消息提示', link: '/components/message' },
             { text: 'Collapse 折叠面板', link: '/components/collapse' },
           ],
         },
