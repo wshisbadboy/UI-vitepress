@@ -21,6 +21,8 @@ UI-vitepress/
 │   │   │   └── custom.css      # CSS 变量映射
 │   │   └── components/         # 各组件 Demo 示例
 │   │       ├── ButtonDemo.vue
+│   │       ├── AlertDemo.vue
+│   │       ├── MessageDemo.vue
 │   │       └── CollapseDemo.vue
 │   ├── index.md                # 首页
 │   ├── guide/                  # 指南
@@ -29,7 +31,18 @@ UI-vitepress/
 │   └── components/             # 组件文档
 │       ├── index.md            # 组件总览
 │       ├── button.md           # Button 按钮
+│       ├── alert.md            # Alert 提示
+│       ├── message.md          # Message 消息提示
 │       └── collapse.md         # Collapse 折叠面板
+├── src/                        # ui-lib 组件源码（自包含）
+│   ├── index.js
+│   └── components/
+│       ├── Button/
+│       ├── Alert/
+│       ├── Message/
+│       └── Collapse/
+├── .github/workflows/
+│   └── deploy.yml              # GitHub Pages 自动部署
 ├── package.json
 └── README.md
 ```
@@ -55,6 +68,8 @@ npm run preview
 | 组件 | 说明 |
 |------|------|
 | Button 按钮 | 支持 primary / secondary / outline / text 四种变体，三种尺寸，禁用与加载状态 |
+| Alert 提示 | 支持 info / success / warning / error 四种类型，可关闭，支持自定义标题和插槽 |
+| Message 消息提示 | 命令式 API 的全局消息通知，支持纯文本和 VNode 渲染，自动消失 |
 | Collapse 折叠面板 | 支持多面板展开、手风琴模式、禁用状态、自定义标题 |
 
 每个组件文档都包含可交互的实时演示和完整的 API 表格。
