@@ -6,9 +6,9 @@ export default defineConfig({
   description: '一个 Vue 3 组件库文档',
   vite: {
     resolve: {
-      alias: {
-        'ui-lib': resolve(__dirname, '../../../ui-lib/src'),
-      },
+    alias: {
+      'ui-lib': resolve(__dirname, '../../src'),
+    },
     },
   },
   themeConfig: {
