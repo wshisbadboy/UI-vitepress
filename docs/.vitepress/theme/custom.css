@@ -1,0 +1,30 @@
+/* ui-lib CSS Variables - 与 VitePress 主题集成 */
+:root {
+  --my-bg: var(--vp-c-bg);
+  --my-bg-soft: var(--vp-c-bg-soft);
+  --my-bg-muted: var(--vp-c-bg-mute);
+  --my-bg-page: var(--vp-c-bg-alt);
+
+  --my-border: var(--vp-c-divider);
+  --my-border-light: var(--vp-c-divider-light);
+
+  --my-text: var(--vp-c-text-1);
+  --my-text-soft: var(--vp-c-text-2);
+  --my-text-muted: var(--vp-c-text-3);
+
+  --my-primary: var(--vp-c-brand-1);
+  --my-primary-hover: var(--vp-c-brand-2);
+  --my-primary-active: var(--vp-c-brand-3);
+  --my-primary-light: var(--vp-c-brand-soft);
+  --my-primary-lighter: var(--vp-c-brand-soft);
+
+  --my-code-bg: var(--vp-code-block-bg);
+  --my-code-text: var(--vp-code-block-color, #e2e8f0);
+
+  --my-btn-secondary-bg: var(--vp-c-bg-soft);
+  --my-btn-secondary-border: var(--vp-c-divider);
+  --my-btn-secondary-hover: var(--vp-c-bg-mute);
+  --my-btn-secondary-active: var(--vp-c-bg-mute);
+  --my-btn-text-hover: var(--vp-c-bg-soft);
+  --my-btn-text-active: var(--vp-c-bg-mute);
+}
