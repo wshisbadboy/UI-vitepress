@@ -30,7 +30,7 @@ My UI Lib 需要 Vue 3 作为对等依赖：
 ```js
 import { createApp } from 'vue'
 import MyUILib from 'wshisbadboy-ui-lib'
-import 'wshisbadboy-ui-lib/dist/wshisbadboy-ui-lib.css'
+
 import App from './App.vue'
 
 const app = createApp(App)

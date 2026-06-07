@@ -20,7 +20,7 @@ yarn add wshisbadboy-ui-lib
 ```js
 import { createApp } from 'vue'
 import UI from 'wshisbadboy-ui-lib'
-import 'wshisbadboy-ui-lib/dist/wshisbadboy-ui-lib.css'
+
 
 const app = createApp(App)
 app.use(UI)
@@ -40,7 +40,7 @@ app.use(UI)
 
 ```js
 import { Button, Alert, Message } from 'wshisbadboy-ui-lib'
-import 'wshisbadboy-ui-lib/dist/wshisbadboy-ui-lib.css'
+
 
 // 命令式调用 Message
 Message.success('操作成功')

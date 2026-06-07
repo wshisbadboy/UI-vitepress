@@ -15,7 +15,7 @@ npm install wshisbadboy-ui-lib
 ```js
 import { createApp } from 'vue'
 import MyUILib from 'wshisbadboy-ui-lib'
-import 'wshisbadboy-ui-lib/dist/wshisbadboy-ui-lib.css'
+
 
 const app = createApp(App)
 app.use(MyUILib)
@@ -25,5 +25,5 @@ app.use(MyUILib)
 
 ```js
 import { Button, Collapse, CollapseItem } from 'wshisbadboy-ui-lib'
-import 'wshisbadboy-ui-lib/dist/wshisbadboy-ui-lib.css'
+
 ```
