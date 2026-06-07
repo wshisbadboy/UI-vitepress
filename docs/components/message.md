@@ -9,7 +9,7 @@
 通过 `Message` 对象调用静态方法：
 
 ```js
-import { Message } from 'my-ui-lib'
+import { Message } from 'wshisbadboy-ui-lib'
 ```
 
 | 方法 | 说明 | 参数 |
@@ -29,7 +29,7 @@ import { Message } from 'my-ui-lib'
 
 ```js
 import { h } from 'vue'
-import { Message } from 'my-ui-lib'
+import { Message } from 'wshisbadboy-ui-lib'
 
 Message.info(() => h('span', [
   '已删除 ',

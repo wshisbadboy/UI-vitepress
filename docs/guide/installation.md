@@ -4,13 +4,13 @@
 
 ```bash
 # npm
-npm install my-ui-lib
+npm install wshisbadboy-ui-lib
 
 # yarn
-yarn add my-ui-lib
+yarn add wshisbadboy-ui-lib
 
 # pnpm
-pnpm add my-ui-lib
+pnpm add wshisbadboy-ui-lib
 ```
 
 ## 对等依赖
@@ -29,8 +29,8 @@ My UI Lib 需要 Vue 3 作为对等依赖：
 
 ```js
 import { createApp } from 'vue'
-import MyUILib from 'my-ui-lib'
-import 'my-ui-lib/dist/my-ui-lib.css'
+import MyUILib from 'wshisbadboy-ui-lib'
+import 'wshisbadboy-ui-lib/dist/wshisbadboy-ui-lib.css'
 import App from './App.vue'
 
 const app = createApp(App)
